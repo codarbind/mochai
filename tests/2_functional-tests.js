@@ -42,11 +42,10 @@ suite('Functional Tests', function () {
 
         .end(function (err, res) {
           assert.equal(res.status,200);
-          assert.deepEqual(res.data,{
-            name: 'Cristoforo',
-            surname: 'Colombo',
-            dates: '1451 - 1506'
-          })
+          assert.equal(res.type,'application/json')
+          assert.equal(res.body.name,'Cristoforo')
+          assert.equal(res.body.surname,'Colombo')
+
 
           done();
         });
