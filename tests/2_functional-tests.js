@@ -41,10 +41,10 @@ suite('Functional Tests', function () {
         .put('/travellers')
         .send({"surname": "Colombo"})
         .end(function (err, res) {
-          assert.deepEqual(res.status,200);
-          assert.deepEqual(res.type,'application/json')
-          assert.deepEqual(res.body.name,'Cristoforo')
-          assert.deepEqual(res.body.surname,'Colombo')
+          assert.equal(res.status,200);
+          assert.equal(res.type,'application/json')
+          assert.equal(res.body.name,'Cristoforo')
+          assert.equal(res.body.surname,'Colombo')
           done();
         });
     });
@@ -56,10 +56,10 @@ suite('Functional Tests', function () {
         .put('/travellers')
         .send({"surname": "da Verrazzano"})
         .end(function (err, res) {
-      assert.deepEqual(res.status,200);
-      assert.deepEqual(res.type,'application/json')
-      assert.deepEqual(res.body.name,'Giovanni')
-      assert.deepEqual(res.body.surname,'da Verrazzano')
+      assert.equal(res.status,200);
+      assert.equal(res.type,'application/json')
+      assert.equal(res.body.name,'Giovanni')
+      assert.equal(res.body.surname,'da Verrazzano')
       done();
         });
 
