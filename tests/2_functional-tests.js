@@ -86,6 +86,7 @@ return browser.visit('/',done)
       browser.fill('surname','Colombo');
       browser.pressButton('submit',()=>{
         browser.assert.status(200)
+        browser.assert.success(200)
         browser.assert.text('span#name','Cristoforo')
         browser.assert.text('span#surname','Colombo')
         browser.assert.elements('span#dates',1)
@@ -98,6 +99,7 @@ return browser.visit('/',done)
       browser.fill('surname','Vespucci');
       browser.pressButton('submit',()=>{
         browser.assert.status(200)
+        browser.assert.success(200)
         browser.assert.text('span#name','Amerigo')
         browser.assert.text('span#surname','Vespucci')
         browser.assert.elements('span#dates',1)
