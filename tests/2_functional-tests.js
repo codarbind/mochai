@@ -39,7 +39,7 @@ suite('Functional Tests', function () {
         .request(server)
         .keepOpen()
         .put('/travellers')
-        .send({surname: "Colombo"})
+        .send({"surname": "Colombo"})
         .end(function (err, res) {
           assert.deepEqual(res.status,200);
           assert.deepEqual(res.type,'application/json')
@@ -54,7 +54,7 @@ suite('Functional Tests', function () {
         .request(server)
         .keepOpen()
         .put('/travellers')
-        .send({surname: "Colombo"})
+        .send({"surname": "da Verrazzano"})
         .end(function (err, res) {
       assert.deepEqual(res.status,200);
       assert.deepEqual(res.type,'application/json')
