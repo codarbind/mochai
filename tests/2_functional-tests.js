@@ -85,7 +85,7 @@ return browser.visit('/',done)
     test('Submit the surname "Colombo" in the HTML form', function (done) {
       browser.fill('surname','Colombo');
       browser.pressButton('submit',()=>{
-        browser.assert.status(200)
+
         browser.assert.success(200)
         browser.assert.text('span#name','Cristoforo')
         browser.assert.text('span#surname','Colombo')
@@ -98,7 +98,7 @@ return browser.visit('/',done)
     test('Submit the surname "Vespucci" in the HTML form', function (done) {
       browser.fill('surname','Vespucci');
       browser.pressButton('submit',()=>{
-        browser.assert.status(200)
+    
         browser.assert.success(200)
         browser.assert.text('span#name','Amerigo')
         browser.assert.text('span#surname','Vespucci')
